@@ -13,7 +13,7 @@ try {
             $receivedBytes = $udpClient.Receive([ref]$remoteEndPoint)
             $message = [System.Text.Encoding]::UTF8.GetString($receivedBytes)
 
-            #If reveives the test message,Red-VPC will show the below string.If not,go to 'catch case.
+            #If reveives the udp packet,Red-VPC will show the below string.If not,go to 'catch case.
             Write-Host "Received from $($remoteEndPoint.Address):$($remoteEndPoint.Port) - $message"
     }
 }catch {
