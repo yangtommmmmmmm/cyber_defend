@@ -16,6 +16,6 @@ Result:
 
 ![螢幕擷取畫面 2026-01-30 065520](https://github.com/user-attachments/assets/995821cf-4d52-4dd7-8033-a8f3bcaf663c)
 
-Then,run 'Symantic_auto.py' to download the virus updated file from below web page to /:
+Then,run 'Symantic_auto.py' to download the virus updated file with 'core3sdsi.jdb' from below web page to C:\Users\User\Desktop\test:
 
 https://www.broadcom.com/support/security-center/definitions/download/detail?gid=sep14
