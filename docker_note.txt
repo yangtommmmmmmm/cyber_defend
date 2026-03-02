@@ -16,6 +16,8 @@ docker-compose ps
 1-2-2-1.Start:docker-compose start [SERVICE]--->If no SERVICE,system will start all services
 1-2-2-2.Stop:docker-compose stop [SERVICE]--->If no SERVICE,system will stop all services
 1-2-2-3.Restart:docker-compose restart [SERVICE]--->If no SERVICE,system will restart all services. restart=stop+start
+1-2-2-4.Remove:docker-compose rm [SERVICE]--->If no SERVICE,system will remove all services
+1-2-2-5.Check the service log:docker-compose log [SERVICE]--->If no SERVICE,system will show all logs for all services
 -----------------------------------------------------------------------------------------------------------------------------
 1-2-3.All Settings Related:
 1-2-3-1.docker-compose up:
@@ -34,5 +36,17 @@ docker-compose down -v
 *If u would like to delete the image:
 docker-compose down --rmi all
 -------------------------------------------------------------------------------------------------------------------------------
-1-2-4.
+1-2-4.Run the command in service:
+docker-compose run/exec web bash--->Run the bash in web service
+-------------------------------------------------------------------------------------------------------------------------------
+1-2-5.Check the format of docker-compose.yaml file:
+docker-compose config
+-------------------------------------------------------------------------------------------------------------------------------
+1-2-6.Show all images:
+docker-compose images
+-------------------------------------------------------------------------------------------------------------------------------
+1-2-7.Push images to docker hub:
+docker-compose push
+-------------------------------------------------------------------------------------------------------------------------------
+
 
