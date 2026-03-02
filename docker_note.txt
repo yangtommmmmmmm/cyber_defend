@@ -48,5 +48,27 @@ docker-compose images
 1-2-7.Push images to docker hub:
 docker-compose push
 -------------------------------------------------------------------------------------------------------------------------------
+1-2-8.Specify the ports and expose to localhost:
+1-2-8-1.To docker-compose.yml, add [ports] to service:
+.....
+ports:
+  - "5000:5000" #let container-5000 port exposed to localhost-5000 port
+  - "5001:5000" #let container-5000 port exposed to localhost-5001 port
+  - "5000" #let container-5000 port exposed to localhost-all ports
 
+1-2-8-2.To docker-compose.yml, add [expose] to service:
+.....
+expose:
+  - "4000" #let the container use 4000 port, and not exposed to localhost
+  - "6000" #let the container use 6000 port, and not exposed to localhost
+
+1-2-8-3.If container,localhost use the same service on the same port, how to connect them?
+To docker-compose.yml, add below parameters to service:
+services:
+
+  web:
+    .....
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    .....
 
