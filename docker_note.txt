@@ -1,5 +1,6 @@
-1.Docker-Compose:                                                                                                                                                                                                  Docker-Compose:
-This tool is for managing the different containers(each container for one service).                                                                                                                                                                                                                                                                                                                                                                                                       
+1.Docker-Compose:                                                                                                                                                                                                  Docker-
+This tool is for managing the different containers(each container for one service).      
+Definition:[One service] determine [the specific image(read only file)] to setup the [container(use CPU)]
 
 1-1.Docker-Compose.yml:
 Reference:
