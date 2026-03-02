@@ -1,0 +1,18 @@
+1.Docker-Compose:                                                                                                                                                                                                  Docker-Compose:
+This tool is for managing the different containers(each container for one service).                                                                                                                                                                                                                                                                                                                                                                                                       
+
+1-1.Docker-Compose.yml:
+Reference:
+https://docs.docker.com/compose/compose-file/
+https://docs.docker.com/compose/compose-file/#compose-file-structure-and-examples
+
+1-2.Basic Docker Command:
+1-2-1.Check the current container:
+docker-compose ps
+--->Add '-q' to demonstrate only 'id'
+
+1-2-2.Service Related:
+1-2-2-1.Start:docker-compose start [SERVICE]
+1-2-2-2.Stop:docker-compose stop [SERVICE]
+1-2-2-3.Restart:docker-compose restart [SERVICE]
+1-2-2-4.
