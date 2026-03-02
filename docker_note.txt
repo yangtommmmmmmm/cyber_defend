@@ -22,8 +22,17 @@ docker-compose ps
 Stop all containers--->Remove all containers--->Remove all Networks--->Read the docker-compose.yml again
 --->Setup
 *If u add '-d',this command will trigger in background.
-*
+*If u have many yaml files,such as docker-compose.yml,docker-compose-dev.yml,you can use -f(or --file) to specify one yaml file:
+docker-compose -f ./docker-compose-dev.yml up -d
+*If u would like to build images before starting containers:
+docker-compose up -d --build
 
 1-2-3-2.docker-compose down:
 Stop all containers--->Remove all containers--->Remove all Networks--->Remove Volume,Image(Selected)
+*If u would like to delete the volume:
+docker-compose down -v
+*If u would like to delete the image:
+docker-compose down --rmi all
+-------------------------------------------------------------------------------------------------------------------------------
+1-2-4.
 
