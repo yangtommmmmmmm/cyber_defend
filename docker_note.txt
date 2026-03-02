@@ -11,9 +11,19 @@ https://docs.docker.com/compose/compose-file/#compose-file-structure-and-example
 1-2-1.Check the current container:
 docker-compose ps
 --->Add '-q' to demonstrate only 'id'
+-----------------------------------------------------------------------------------------------------------------------------
+1-2-2.Only Service Related:
+1-2-2-1.Start:docker-compose start [SERVICE]--->If no SERVICE,system will start all services
+1-2-2-2.Stop:docker-compose stop [SERVICE]--->If no SERVICE,system will stop all services
+1-2-2-3.Restart:docker-compose restart [SERVICE]--->If no SERVICE,system will restart all services. restart=stop+start
+-----------------------------------------------------------------------------------------------------------------------------
+1-2-3.All Settings Related:
+1-2-3-1.docker-compose up:
+Stop all containers--->Remove all containers--->Remove all Networks--->Read the docker-compose.yml again
+--->Setup
+*If u add '-d',this command will trigger in background.
+*
 
-1-2-2.Service Related:
-1-2-2-1.Start:docker-compose start [SERVICE]
-1-2-2-2.Stop:docker-compose stop [SERVICE]
-1-2-2-3.Restart:docker-compose restart [SERVICE]
-1-2-2-4.
+1-2-3-2.docker-compose down:
+Stop all containers--->Remove all containers--->Remove all Networks--->Remove Volume,Image(Selected)
+
