@@ -72,3 +72,36 @@ services:
       - "host.docker.internal:host-gateway"
     .....
 
+1-3.Docker Registry:
+It's a repository for docker.Same as GitHub.
+1-3-1.The learning resource:
+Youtube Tutorial PART 4 - Docker push image to Docker Hub 教學
+
+1-3-2.Registration:
+Follow below resource to registry for the Docker Registry:
+https://hub.docker.com/
+
+1-3-3.Login to Docker Registry:
+docker login
+
+1-3-4.Commit the message to Docker Registry:
+Step1.Run the busybox container:
+docker run -it busybox
+Step2.Then, add the data:
+echo 'text' > data.txt
+Step3.Open the another terminal,use 'docker ps' to check the container's id.
+
+Step4.Commit the change to Docker Registry:(Very Important)
+docker commit -m "test" {container_id} {defined repository_name}
+--->test is the commit message
+*If need tag,we can do below:
+docker commit -m "test" {container_id} {defined repository_name:v1}
+But if not tag,the system will tag 'latest' to repository_name automatically:
+docker commit -m "test" {container_id} {defined repository_name:latest}
+
+Step5.Push the change to Docker Registry:
+docker push {defined repository_name}
+
+Step6.After that,you can browse the Docker Registry Web to check whether change uploads successful or not?
+The Docker Registry Web Resource:
+https://hub.docker.com/
