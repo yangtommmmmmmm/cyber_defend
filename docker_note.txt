@@ -112,3 +112,16 @@ https://hub.docker.com/
 https://github.com/twtrubiks/docker-tutorial
 
 4.Linux for docker:
+4-1.Check the docker version:---->Use 'sudo' or be 'dockergroup' to execute it
+$sudo docker version
+
+4-2.Basic commands:
+4-2-1.docker build: docker file--->docker image
+4-2-2.docker run: docker image--->docker container
+4-2-3.docker start:trigger the service container
+4-2-4.docker stop:stop the service container
+4-2-5.docker restart:restart the service container
+4-2-6.docker commit: docker container--->docker image
+4-2-7.docker push: push the image from local to docker registry
+4-2-8.docker pull: pull the image from docker registry to local
+
