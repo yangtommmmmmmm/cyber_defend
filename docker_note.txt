@@ -117,6 +117,7 @@ $sudo docker version
 
 4-2.Basic commands:
 4-2-1.docker build: docker file--->docker image
+*Check the current images:docker images
 4-2-2.docker run: docker image--->docker container
 4-2-3.docker start:trigger the service container
 4-2-4.docker stop:stop the service container
