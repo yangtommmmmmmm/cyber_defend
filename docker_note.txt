@@ -108,7 +108,7 @@ https://hub.docker.com/
 
 ------------------------------------------------------------------------------------------------------------------------------
 
-3.Resource Link:
+3.Resource Link for Windows Docker:
 https://github.com/twtrubiks/docker-tutorial
 
 4.Linux for docker:
@@ -118,11 +118,28 @@ $sudo docker version
 4-2.Basic commands:
 4-2-1.docker build: docker file--->docker image
 *Check the current images:docker images
-4-2-2.docker run: docker image--->docker container
-4-2-3.docker start:trigger the service container
-4-2-4.docker stop:stop the service container
-4-2-5.docker restart:restart the service container
-4-2-6.docker commit: docker container--->docker image
-4-2-7.docker push: push the image from local to docker registry
-4-2-8.docker pull: pull the image from docker registry to local
+*docker rmi {image_id/image_name}
 
+4-2-2.docker run: docker image--->docker container
+*Check the current containers:docker ps -a
+*docker run {container_id/container_name}
+*docker exec -it mysql bash 
+
+4-2-3.docker start:trigger the service container
+*docker start {container_id/container_name}
+4-2-4.docker stop:stop the service container
+*docker stop {container_id/container_name}
+4-2-5.docker restart:restart the service container
+*docker restart {container_id/container_name}
+4-2-6.docker rm:remove the service container
+*docker rm {container_id/container_name}
+*docker rm `docker ps -aq`--->Remove all contianers 
+
+4-2-7.docker commit: docker container--->docker image
+4-2-8.docker push: push the image from local to docker registry
+4-2-9.docker pull: pull the image from docker registry to local
+*docker pull--->pull the latest version image to docker local
+*docker pull 2.5.3--->pull the 2.5.3 version image to docker local
+
+4-2-10.Resource Link for Linux Docker:
+https://medium.com/ching-i/docker-%E4%BB%8B%E7%B4%B9%E8%88%87%E5%AE%89%E8%A3%9D-6ca8ea6beaf0
