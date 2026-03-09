@@ -1,0 +1,4 @@
+This section is mainly talking about how to setup Python Virtual environment on Vmware-Windows:
+
+Step1.Go to below url to download Microsoft Visual  C++ Redistributable file:
+https://learn.microsoft.com/en-us/cpp/windows/latest-supported-vc-redist?view=msvc-170
