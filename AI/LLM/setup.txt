@@ -1,4 +1,39 @@
-This section is mainly talking about how to setup Python Virtual environment on Vmware-Windows:
+This section is mainly talking about how to setup Python Virtual environment running LLM on Vmware-Windows:
 
-Step1.Go to below url to download Microsoft Visual  C++ Redistributable file:
+1.Microsoft Visual C++ Redistributable:
+Step1.Go to below url to download Microsoft Visual C++ Redistributable file:
 https://learn.microsoft.com/en-us/cpp/windows/latest-supported-vc-redist?view=msvc-170
+
+Step2.Find the "X64" architecture version
+
+Step3.Click to download:VC_redist.x64.exe
+
+Step4.Then you have installed Microsoft Visual C++ Redistributable file
+
+2.Setup Python Virtual Environment:
+Step1.Download the Python executable file from below url on Windows vm:
+https://www.python.org/
+
+Step2.After downloading it,setup virtual environment:
+Open the cmd--->C:\Users\Administrator\Desktop>py -m venv ai_env
+
+Step3.Go to 'ai_env' folder,then trigger the environment:
+C:\Users\Administrator\Desktop>ai_env\Scripts\activate
+
+Step4.Upgrading all tools:
+(ai_env)C:\Users\Administrator\Desktop>py -m pip install --upgrade pip setuptools wheel
+
+Step5.Install below packages:
+(ai_env)C:\Users\Administrator\Desktop>py -m pip install transformers
+(ai_env)C:\Users\Administrator\Desktop>py -m pip install torch
+
+Step6.Write the below python script,named 'install_success.py', to test whether 'transformers' and 'torch' packages are successful installed or not.
+The script content as below:
+import transformers
+import torch
+print(transformers.__version__)
+print(torch.__version__)
+--->(ai_env)C:\Users\Administrator\Desktop\python_llm>py install_success.py--->If success,the system will show version.
+
+Finally,if u would like to exit the virtual environment,u just type below command to exit:
+(ai_env)C:\Users\Administrator\Desktop\python_llm>deactivate
