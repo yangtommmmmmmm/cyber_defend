@@ -1,0 +1,2 @@
+The resource for QRCE-Rules-Master:
+https://github.com/Xboarder56/QRCE-Rules/tree/master
