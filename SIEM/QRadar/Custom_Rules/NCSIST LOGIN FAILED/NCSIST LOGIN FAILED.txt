@@ -1,0 +1,18 @@
+Rule Description
+ 	Apply NCSIST LOGIN FAILED on events which are detected by the Local system
+     and when the event category for the event is one of the following Authentication.User.Login.Failure
+     and when at least 3 events are seen with the same Username in 3 minutes
+
+Rule Actions
+ 	Force the detected Event to create a NEW offense, select the offense using Source IP
+    Annotate this offense with: NCSIST LOGIN FAILED
+
+Rule Responses
+ 	Dispatch New Event
+    Event Name:NCSIST LOGIN FAILED
+    Event Description: This rule is designed to look for brute force attack. This could indicate an attacker is actively trying to do cracking the     username/password on the local network.
+    Severity: 9 Credibility: 10 Relevance: 10
+    High-Level Category: Authentication
+    Low-Level Category: User Login Failure
+    Annotate the offense with NCSIST LOGIN FAILED
+    Force the dispatched event to create a NEW offense, select the offense using Source IP
