@@ -1,0 +1,20 @@
+
+Rule Description
+ 	Apply NCSIST DOS SYN on events which are detected by the Local system
+  and when the event(s) were detected by one or more of fortigate @ 172.26.10.254
+  and when the event category for the event is one of the following DOS SYN Flood
+  and when the event matches Action (custom) is any of detected
+
+Rule Actions
+ 	Force the detected Event to create a NEW offense, select the offense using Source IP
+    Annotate this offense with: NCSIST DOS SYN
+
+Rule Responses
+ 	Dispatch New Event
+    Event Name:NCSIST DOS SYN
+    Event Description: This rule is designed to look for ddos attack. This could indicate an attacker is actively trying to DoS on the local network.
+    Severity: 7 Credibility: 10 Relevance: 10
+    High-Level Category: DOS
+    Low-Level Category: SYN Flood
+    Annotate the offense with NCSIST DOS SYN
+    Force the dispatched event to create a NEW offense, select the offense using Source IP
